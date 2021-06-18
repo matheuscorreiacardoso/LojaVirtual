@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LojaVirtual.Models
 {
@@ -20,5 +21,15 @@ namespace LojaVirtual.Models
         }
 
         #endregion
+
+        public void AddSeller(Seller seller)
+        {
+            Sellers.Add(seller);
+        }
+
+        public double TotalSales(DateTime inicial, DateTime final)
+        {
+            return Sellers.Sum(seller => seller.TotalSales(inicial, final));
+        }
     }
 }
