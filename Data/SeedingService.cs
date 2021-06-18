@@ -2,6 +2,7 @@
 using System.Linq;
 using System;
 using LojaVirtual.Models.Enums;
+
 namespace LojaVirtual.Data
 {
     public class SeedingService
